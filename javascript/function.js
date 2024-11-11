@@ -88,7 +88,7 @@ function loginUserMessage(username) {
     return `${username} just logged in`
 }
 
-// console.log(loginUserMessage())
+// console.log(loginUserMessage())     // please enter a user name then show undefined (because we not declar or put a user or value )
 
 
 
@@ -102,5 +102,30 @@ function loginUserMessage(username) {
     return `${username} just logged in`
 }
 
-console.log(loginUserMessage())
+// console.log(loginUserMessage())    // please enter a user name then show undefined (because we not declar or put a user or value )
+ 
 
+
+function loginUserId(userid){
+    if (!userid) {
+        console.log("please enter your id");
+        return
+    }
+    return `${userid} just entered`
+}
+
+// console.log(loginUserId("Naresh"))   // if pass the value or id then print userid just entered
+// console.log(loginUserId())   // if not pass the value then undefined 
+
+
+// Another to avoid the undefined value or pass a defult value 
+function loginUserId(userid = "sanvi"){
+    if (!userid) {
+        console.log("please enter your id");
+        return
+    }
+    return `${userid} just entered`
+}
+
+// console.log(loginUserId()) // if not pass then print will be sanvi just entered
+console.log(loginUserId("naresh")) // if pass the value or a id then naresh just entered
